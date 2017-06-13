@@ -11,7 +11,10 @@
 Include popular icons in your React projects easly with ```react-icons```, which utilizes ES6 imports that allows you to include only the icons that your project is using.
 
 ### Installation
-    npm install react-icons --save
+
+```sh
+npm install @exah/react-icons --save
+```
 
 ### Usage
 
