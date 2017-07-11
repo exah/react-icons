@@ -8,6 +8,7 @@ const _ = require('underscore')
 const glob = require('glob')
 const path = require('path')
 const rootDir = path.join(__dirname, '..')
+const srcDir = path.join(rootDir, 'src')
 const attrs = ['xlink:href', 'clip-path', 'fill-opacity', 'fill']
 const cleanAtrributes = function ($el, $) {
   _.each(attrs, function (attr) {
@@ -55,7 +56,7 @@ const ${name} = props => (
 export default ${name}
 `
 
-    fs.writeFileSync(path.join(rootDir, location), component, 'utf-8')
+    fs.writeFileSync(path.join(srcDir, location), component, 'utf-8')
     console.log(path.join('.', location))
   })
   _.each(types, function (_components, folder) {
@@ -66,9 +67,6 @@ export default ${name}
       nextLoc = '.' + nextLoc
       return `export { default as ${name} } from '${nextLoc}'`
     }).join('\n') + '\n'
-    fs.writeFileSync(path.join(rootDir, folder, 'index.js'), iconsModule, 'utf-8')
-    console.log(path.join('.', folder, 'index.js'))
+    fs.writeFileSync(path.join(srcDir, folder, 'index.js'), iconsModule, 'utf-8')
   })
-  console.log('IconBase.js')
-  console.log('index.js')
 })

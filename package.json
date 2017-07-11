@@ -4,10 +4,11 @@
   "description": "svg react icons of popular icon packs using ES6 imports",
   "module": "lib/index.js",
   "scripts": {
-    "docs": "babel-node ./bin/generate-docs",
-    "build": "node ./bin/create | xargs babel --out-dir lib",
-    "prepublish": "npm run build",
-    "lint": "eslint ."
+    "docs": "babel-node bin/generate-docs",
+    "create": "node bin/create",
+    "build": "babel src --out-dir lib",
+    "test": "eslint .",
+    "prebuild": "npm run create"
   },
   "repository": {
     "type": "git",
