@@ -1,3 +1,3 @@
-import IconBase from 'react-icon-base';
+import IconBase from 'react-icon-base'
 
-export default IconBase;
+export default IconBase
