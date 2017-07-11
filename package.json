@@ -1,6 +1,6 @@
 {
   "name": "@exah/react-icons",
-  "version": "2.2.7-0",
+  "version": "2.2.7",
   "description": "svg react icons of popular icon packs using ES6 imports",
   "module": "lib/index.js",
   "scripts": {
