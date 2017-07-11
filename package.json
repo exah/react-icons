@@ -7,6 +7,7 @@
     "docs": "babel-node bin/generate-docs",
     "create": "node bin/create",
     "build": "babel src --out-dir lib",
+    "deploy": "np --any-branch",
     "test": "eslint .",
     "prebuild": "npm run create"
   },
@@ -50,6 +51,7 @@
     "husky": "^0.14.3",
     "marky-markdown": "https://github.com/npm/marky-markdown",
     "material-design-lite": "^1.0.6",
+    "np": "^2.16.0",
     "svg-scaler": "gorangajic/svg-scaler#take-size-viewbox",
     "underscore": "^1.8.3"
   },
