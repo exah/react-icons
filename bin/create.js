@@ -61,13 +61,14 @@ export default ${name}
   _.each(types, function (_components, folder) {
     const iconsModule = _.map(_components, function (loc, name) {
       let nextLoc = loc
-      nextLoc = loc.replace('.js', '')
-      nextLoc = loc.replace('/' + folder, '')
-      nextLoc = '.' + loc
+      nextLoc = nextLoc.replace('.js', '')
+      nextLoc = nextLoc.replace('/' + folder, '')
+      nextLoc = '.' + nextLoc
       return `export { default as ${name} } from '${nextLoc}'`
     }).join('\n') + '\n'
     fs.writeFileSync(path.join(rootDir, folder, 'index.js'), iconsModule, 'utf-8')
     console.log(path.join('.', folder, 'index.js'))
   })
   console.log('IconBase.js')
+  console.log('index.js')
 })
