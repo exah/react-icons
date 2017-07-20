@@ -8,6 +8,7 @@
     "create": "node bin/create",
     "build": "babel src --out-dir lib",
     "deploy": "np --any-branch",
+    "version": "npm run build",
     "test": "eslint .",
     "prebuild": "npm run create"
   },
